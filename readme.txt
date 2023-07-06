@@ -1,33 +1,19 @@
 === Fastbreak ==
-
-Requires PHP: 7.2
+Contributors: Tradesouthwest
+Requires PHP: 7.4
 Requires CP:  1.4
+Tested up to: 1.5
+Version:      1.0.0
+Text domain:  fastbreak
+License: GPLv2 or later; License URI: http://www.gnu.org/licenses/gpl-2.0.html; 
+Tags: one-column, two-columns, right-sidebar, left-sidebar, blog
 
-TODO
-link colors (non menu)
-top strip content
+Fastbreak for ClassicPress is a fast and sleek magazine type of layout with mobile ready menus and widgets.
 
+== Description ==
+Fastbreak for ClassicPress is a fast and sleek magazine type of layout with mobile ready menus and widgets. 
 
-/*!
- * chota.css v0.9.2 | MIT License | https://github.com/jenil/chota
- * https://jenil.github.io/chota/
- */
---bg-color: inherit;
-  --bg-secondary-color: #f3f3f6;
-  --color-primary: #14854f;
-  --color-linkBlue: #1455c2;
-  --color-lightGrey: #d2d6dd;
-  --color-grey: #747681;
-  --color-darkGrey: #3f4144;
-  --color-error: #d43939;
-  --color-success: #28bd14;
-  --grid-maxWidth: 136rem;
-  --grid-gutter: 2rem;
-  --font-size: 16px;
-  --font-color: #333;
-
-== Features ==
-= Switchable style presets
-<iframe src="https://swishanalytics.com/partners/mlb/batter-outcomes-1?id=547180"
-style="display:block; margin:auto; width: 100%; height:320px;" frameborder="0"></iframe>
-
+## Features 
+- Background color for top poromo strip
+- Custom advert area in header
+- Flex based layouts

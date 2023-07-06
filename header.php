@@ -27,7 +27,7 @@
 	    <?php if ( has_nav_menu( 'secondary-menu' ) ) : ?>
 	    
 		<div class="row">		<!-- above top strip -->
-			<div class="col-12 bg-darker text-white top-strip"> 
+			<div class="col-12 text-white top-strip"> 
 			<?php
 				wp_nav_menu(
 					array(
@@ -41,7 +41,7 @@
 		</div>
 		<?php endif; ?>
 		<div class="row">		<!-- above menu strip -->
-			<div class="col-12 bg-darker text-white top-strip"> 
+			<div class="col-12 text-white top-strip"> 
 
 				<?php do_action( 'fastbreak_render_topstrip' ); ?>
 			

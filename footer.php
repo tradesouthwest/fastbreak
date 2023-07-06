@@ -42,8 +42,9 @@
                 </div>     
     </div>
         <div id="footerCopy" class="row">
-            <div class="col bd-light"> 
-                <p>&copy; 2023 <a href="#topHeader">[Top]</a></p>
+            <div class="col"> 
+                <p>&copy; <?php echo date_i18n(__( 'Y', 'fastbreak' )); ?> 
+                <a class="bg-light" href="#top">[<?php esc_html_e('Top', 'fastbreak'); ?>]</a></p>
             </div>
         </div>
         

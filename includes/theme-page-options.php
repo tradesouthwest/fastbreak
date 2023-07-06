@@ -2,17 +2,27 @@
 /**
  * Page options settings
  */
+
 // A1
-//add_action( 'tinydancer_hero_heading', 'tinydancer_hero_heading_render', 9 );
+add_action( 'wp_head', 'fastbreak_theme_customizer_css', 12 );  
 
-/** #A1
- * Render text h4 hero heading
- * @since 1.0
- * @return string Text only wrapped in h4 tag
- */
-function tinydancer_hero_heading_render(){
 
-    $heading = get_theme_mod( 'tinydancer_hero_heading', 'site' );
-    //tinyDancer is a minimalistic tiny flex based theme templated for general website use. Has a Hero section template for a home (or any) page. Basic content sections are seventy percent and thirty percent widths. Footer is full width with three widget sections.";
-return $heading;
-}
+/** A1
+ * CUSTOM FONT OUTPUT, CSS
+ * The @font-face rule should be added to the stylesheet before any styles. (priority 2)
+ * @uses background-image as linear gradient meerly remove any input background image.
+ * @since 1.0.0
+*/
+function fastbreak_theme_customizer_css() 
+{   
+$tsb  = ( empty( get_theme_mod( 'fastbreak_topbars_color' ) ) ) ? '#3d3d3d' 
+               : get_theme_mod( 'fastbreak_topbars_color' );
+
+    /* use above set values into inline styles */
+    $css = '<style id="fastbreak-inline-customizer" type="text/css">';
+    $css .= '#footerCopy,.top-strip,.nav{background-color: ' . esc_attr($tsb) . '}';
+    $css .= '</style>';
+
+    echo $css;  
+        
+} 

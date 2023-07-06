@@ -23,13 +23,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
  * 1.0 - Presets 
  * 2.0 - Universal (resets)
  * 3.0 - Containers 
- * 4.0 - Top Section & Nav
+ * 4.0 - Sections & Nav
  * 5.0 - Forms 
- * 6.0 - Main 
- * 7.0 - Content
- * 8.0 - Sidebar
- * 9.0 - Footer
- * 10.0 - Media Breakpoints
+ * 6.0 - Main Content
+ * 7.0 - Media Breakpoints
  */
 /* 
  * ************************************************** 1.0 - Presets 
@@ -472,7 +469,7 @@ ul li {
   }
 }
 /* 
- * ************************************************** 4.0 - Top Section
+ * ************************************************** 4.0 - Sections
  */
 .site-title a{
   color: #494c4f;
@@ -498,8 +495,21 @@ ul li {
 .above-menu{
   background: 255, 255, 255, .8;
 }
+/* ************************************************** 4.1 - Other Content
+*/
+#footerCopy,
+.wp-caption-text,
+.algn-cntr{
+  display: flex;
+  justify-content: center;
+  text-align:center;
+  align-items: center;
+}
+#footerCopy{
+  color: white;
+}
 /* 
- * ************************************************** 4.1 - Navigation
+ * ************************************************** 4.2 - Navigation
  */
  .nav {
   display: flex;
@@ -540,6 +550,7 @@ ul li {
   height: 2.222em;
   line-height: .222;
   border-radius: 4px;
+  background: rgba(252,252,252, .97);
 }
 .current-page-ancestor.current-menu-ancestor.current-menu-parent.current-page-parent,
 .page-nav li:hover,
@@ -626,10 +637,15 @@ ul li {
   color: var(--bg-secondary-color);
   padding-left:.938rem;
   padding-right:.938rem;
+  border-radius: 4px;
 }
 .page-nav-top li{
   border: thin solid ghostwhite;
   margin-right: 1rem;
+  border-radius: 4px;
+}
+.page-nav-top a:hover{
+  opacity: .76
 }
 a:focus-within { 
   outline:thin dotted; 
@@ -649,45 +665,44 @@ a:hover, a[aria-current="page"]{
   .navbar-toggle:not(.tag){
     display: none;
   }
-.page-nav{
-  flex-direction: row;
-}
-.page-nav li{
-  line-height: initital;
-  flex-direction: row;
- 
-}
-.page-nav .menu-item-has-children,
-.page-nav button.tag{
-  border-radius: 0 5px 5px 0;
-  display: flex;
-}
+  .page-nav{
+    flex-direction: row;
+  }
+  .page-nav li{
+    line-height: initital;
+    flex-direction: row;
+  
+  }
+  .page-nav .menu-item-has-children,
+  .page-nav button.tag{
+    border-radius: 0 5px 5px 0;
+    display: flex;
+  }
 
-.page-nav .sub-menu {
-  margin-left: 0;
-}
-.nav-list .page-nav li.menu-item-has-children .sub-menu {
-  opacity: 0;
-  transition: .5s
-}
-.page-nav .sub-menu li ul > li{
-  margin-left: 1em;
-  width: 100%;
-}
+  .page-nav .sub-menu {
+    margin-left: 0;
+  }
+  .nav-list .page-nav li.menu-item-has-children .sub-menu {
+    opacity: 0;
+    transition: .5s
+  }
+  .page-nav .sub-menu li ul > li{
+    margin-left: 1em;
+    width: 100%;
+  }
 
-.nav-list .page-nav li.menu-item-has-children:hover .sub-menu,
-.page-nav a:focus {
-  opacity: 1
-}
-.nav-button a {
- 
-  cursor: pointer; 
-  font-size: 18px;
-}
-.mobiactive {
-  display: flex;
-}
-
+  .nav-list .page-nav li.menu-item-has-children:hover .sub-menu,
+  .page-nav a:focus {
+    opacity: 1
+  }
+  .nav-button a {
+  
+    cursor: pointer; 
+    font-size: 18px;
+  }
+  .mobiactive {
+    display: flex;
+  }
 }
 /* pagination */
 .prvpst-nav,
@@ -697,12 +712,12 @@ a:hover, a[aria-current="page"]{
   background: lemonchiffon;
   border-radius: 4px;
   height: 2rem;
-width: 2rem;
-display: inline-flex;
-text-align: center;
-justify-content: center;
-padding: 5px 10px;
-align-items: center;
+  width: 2rem;
+  display: inline-flex;
+  text-align: center;
+  justify-content: center;
+  padding: 5px 10px;
+  align-items: center;
 }
 .pagination-nav{
   display: flex;
@@ -715,12 +730,7 @@ align-items: center;
 .nxtpst-nav{
   box-shadow: 1px 1px 1px 1px #cdcecf;
 }
-.algn-cntr{
-  display: flex;
-  justify-content: center;
-  text-align:center;
-  align-items: center;
-}
+
 /* 
  * ************************************************** 5.0 - Forms
  */
@@ -903,8 +913,9 @@ button:active:not(:disabled) {
   color: #bdbfc4;
 }
 
-/** ************************************************** Page Content 
+/** ************************************************** 6.0 - Main Page Content 
 */
+
 .card {
   padding: 1rem 2rem;
   border-radius: 4px;
@@ -948,7 +959,6 @@ button:active:not(:disabled) {
 .tag {
   display: inline-block;
   border: 1px solid var(--color-lightGrey);
-  text-transform: uppercase;
   color: var(--color-grey);
   padding: 0.5rem;
   line-height: 1;

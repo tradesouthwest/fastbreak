@@ -51,6 +51,24 @@ function fastbreak_register_theme_customizer_setup($wp_customize)
 		'type'       => 'text',
 		'description' => __( 'Add text to very top strip', 'fastbreak')
 	));
+	
+	$wp_customize->add_setting(
+		'fastbreak_topbars_color', array(
+		'default'           => '',
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'theme_mod',
+		'capability'        => 'edit_theme_options',
+		'transport'         => 'refresh'
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control(
+		$wp_customize,
+		'fastbreak_topbars_color',
+		array('label'  => __( 'Color for top bars.', 'fastbreak' ),
+			'section'  => 'fastbreak_header',
+			'settings' => 'fastbreak_topbars_color',
+			'description' => __( 'Use darker colors only.', 'fastbreak')
+		) ) 
+	);
 
 	// Add setting & control for hero image
 	$wp_customize->add_setting( 'fastbreak_advert_image', array(

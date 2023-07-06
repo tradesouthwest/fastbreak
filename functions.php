@@ -153,7 +153,7 @@ function fastbreak_theme_content_width() {
  * @since Classic Sixteen 1.0
  */
 function fastbreak_theme_enqueue_styles() {
-	$ver = time();
+	$ver = '1.0.0';
 	wp_enqueue_style( 
 		'fastbreak-style', 
 		get_stylesheet_uri() 
@@ -294,6 +294,7 @@ function fastbreak_theme_widgets_init() {
  */
 require get_template_directory() . '/includes/fastbreak_wrap.php';
 require get_template_directory() . '/includes/customizer.php';
+require get_template_directory() . '/includes/theme-page-options.php';
 
 /** #A5
  * Render advert image to header area
