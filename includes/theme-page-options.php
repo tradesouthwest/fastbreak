@@ -116,19 +116,27 @@ function fastbreak_theme_customizer_css()
     <a href="<?php echo esc_url('https://github.com/tradesouthwest/fastbreak/issues'); ?>" 
        title="<?php echo esc_attr('theme support', 'fastbreak'); ?>" target="_blank">
        <?php esc_html_e('Open Issue for Support', 'fastbreak'); ?></a>
-       <small><?php esc_html_e('[opens in new window]', 'fastbreak'); ?><small></p>
-
-
+       <small><?php esc_html_e('[opens in new window]', 'fastbreak'); ?></small></p>
+        <h3><?php esc_html_e('Tips', 'fastbreak'); ?></h3>
+        <ul>
+            <li>&#9733; <?php esc_html_e('Advert box in header can be used for more than advertising. Try adding player of the month or deal for the day.', 'fastbreak'); ?></li>
+            <li>&#9733; <?php esc_html_e('For cusomtizations you can reach out to the theme author on Github Issues tracker, linked above.', 'fastbreak'); ?></li>
+            <li>&#9733; <?php esc_html_e('Mobile menus should be well adjusted on all devices. If you find a particular browser/device that is looking odd, please open a new issue so we can update the theme.', 'fastbreak'); ?></li>
+            <li>&#9733; <?php esc_html_e('Base background color for top bars and footer has white text. Be sure to compensate by using darker backgrounds.', 'fastbreak'); ?></li>
+            <li>&#9733; <?php esc_html_e('', 'fastbreak'); ?></li>
+            <li>&#9733; <?php esc_html_e('Theme by TradeSouthWest - https://tradesouthwest.com', 'fastbreak'); ?></li>
+        </ul>
+    </section>
     <?php } ?>
     
     </div>
 <?php 
 }
 function fastbreak_short_basic_debug_info( $html = true ) {
-    global $wp_version, $wpdb;
+    global $cp_version, $wpdb;
 
     $data = array(
-        'WordPress Version'     => $wp_version,
+        'ClassicPress Version'     => $cp_version,
         'PHP Version'           => phpversion(),
         'MySQL Version'         => $wpdb->db_version(),
         'WP_DEBUG'              => ( WP_DEBUG === true ) ?  
