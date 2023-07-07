@@ -79,21 +79,16 @@ function fastbreak_theme_customizer_css()
         <?php settings_errors(); ?>
        
     <section>
-    <h3><?php esc_html_e( 'Basic Information', 'fastbreak'); ?></h3>
-    <div style="background:oldlace;height:3em">
-        <?php echo fastbreak_short_basic_debug_info(); ?>
-    </div>
-    <hr id="fastbreak-hr"><br>
-    <div style="background:oldlace;height:3em">
-        <p><a class="button" href="<?php echo admin_url( '/customize.php?autofocus[section]=fastbreak_header' ); ?>" 
-           title="Customizer">Customize Theme Settings</a></p>
+    <div>
+        <p><a class="button" href="<?php echo esc_url( admin_url( '/customize.php?autofocus[section]=fastbreak_header' ) ); ?>" 
+           title="Customizer"><?php esc_html_e('Customize Theme Settings', 'fastbreak'); ?></a></p>
     </div>
     </section>
     
     <section><h2><?php esc_html_e( 'Theme Help', 'fastbreak' ); ?></h2>
     <p><?php esc_html_e( 'For support issues please use the Issues panel on our Github account for this theme.', 'fastbreak'); ?>
     <a href="<?php echo esc_url('https://github.com/tradesouthwest/fastbreak/issues'); ?>" 
-       title="<?php echo esc_attr('theme support', 'fastbreak'); ?>" target="_blank">
+       title="<?php esc_attr_e('theme support', 'fastbreak'); ?>" target="_blank">
        <?php esc_html_e('Open Issue for Support', 'fastbreak'); ?></a>
        <small><?php esc_html_e('[opens in new window]', 'fastbreak'); ?></small></p>
         <h3><?php esc_html_e('Tips', 'fastbreak'); ?></h3>
@@ -104,31 +99,11 @@ function fastbreak_theme_customizer_css()
             <li>&#9733; <?php esc_html_e('Base background color for top bars and footer has white text. Be sure to compensate by using darker backgrounds.', 'fastbreak'); ?></li>
             <li>&#9733; <?php esc_html_e('Title on Front Page template is hidden. To show title edit out line 1148 in the stylesheet.', 'fastbreak'); ?>
             <code>.home .page-title{ display: flex; }</code></li>
-            <li>&#9733; <?php esc_html_e('Theme by TradeSouthWest - https://tradesouthwest.com', 'fastbreak'); ?></li>
-            <li>&#9733; <?php esc_html_e('', 'fastbreak'); ?></li>
+            <li>&#9733; <?php esc_html_e('Theme by TradeSouthWest https://tradesouthwest.com', 'fastbreak'); ?></li>
+            <li>&#9733; <?php esc_html_e('ver 1.0.0', 'fastbreak'); ?></li>
         </ul>
     </section>
     
     </div>
 <?php 
 }
-function fastbreak_short_basic_debug_info( $html = true ) {
-    global $cp_version, $wpdb;
-
-    $data = array(
-        __('ClassicPress Version', 'fastbreak' )  => $cp_version,
-        __('PHP Version', 'fastbreak' )           => phpversion(),
-        __('MySQL Version', 'fastbreak' )         => $wpdb->db_version(),
-        __('WP_DEBUG State', 'fastbreak' )        => ( WP_DEBUG === true ) ?  
-                                                        'Enabled' : 'Disabled',
-    );
-    if ( $html ) {
-        $html = '<ol>';
-        foreach ( $data as $what_v => $v ) {
-    $html .= '<li style="display: inline;"><strong>' . $what_v . '</strong>: ' . $v . ' </li>';
-        }
-        $html .= '</ol>';
-    }
-    return $html;
-} 
-
