@@ -20,18 +20,22 @@ License: GPLv2 or later; License URI: http://www.gnu.org/licenses/gpl-2.0.html;
 Tags: one-column, two-columns, right-sidebar, left-sidebar, blog
 
 ## Description
-Fastbreak for ClassicPress is a fast and sleek magazine type of layout with mobile ready menus and widgets.
+Fastbreak for ClassicPress is a fast and sleek magazine type of layout with mobile ready menus and widgets. Has built in font stack for Helvetica and another for Monsterrat so you don't need to use an external source to load fonts.
+
 
 ## Features 
-- Theme headings
-- Custom large banner "Hero" section on specific pages
-- Hero adds Title, intro, background image, Call To Action button and url to button
-- Display blog posts as column or row boxes
-- Adjustable content padding
-- font and background color adjustments
-- Uses CSS Flex layout for reliable responsive design
-- Three footer widgets
-- Sidebar is on right
+
+- Custom advert area in header
+- Flex based layouts
+- Full width template
+- Three sections template, ideal for mobile so content is on top.
+- Default template is 3/4 by 1/4 content and sidebar
+- Front page template is thin sidebar, right; wide center content and second sidebar, right layout.
+- Cusomtizer has options to Add text to top strip in header
+- Change color background of theme
+- Change background of header and footer sections
+- Add an advert and your logo to header.
+- Fully mobile friendly.
 
 ## Installation
 

@@ -201,11 +201,12 @@ ul li {
 }
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
+  /*clip-path: polygon(0px 0px, 0px 0px,0px 0px, 0px 0px);
+  -webkit-clip-path: polygon(0px 0px, 0px 0px,0px 0px, 0px 0px);*/
 	height: 1px;
 	overflow: hidden;
 	position: absolute ;
 	width: 1px;
-	/* many screen reader and browser combinations announce broken words as they would appear visually */
 	word-wrap: normal ;
 }
 /* must have higher specificity than alternative color schemes inline styles */
@@ -232,6 +233,8 @@ ul li {
 
 .skip-link:focus {
 	clip: auto;
+  clip-path: auto;
+  -webkit-clip-path: auto;
 	height: auto;
 	left: 6px;
 	top: 7px;
@@ -493,10 +496,16 @@ ul li {
   padding-top: .45em;
 }
 .above-menu{
-  background: 255, 255, 255, .8;
+  background: 255, 255, 255, 0.8;
 }
 /* ************************************************** 4.1 - Other Content
 */
+.above-menu{
+  margin-bottom: -0.75em
+}
+#site-footer{
+  border-top: thin solid var(--color-lightGrey)
+}
 #footerCopy,
 .wp-caption-text,
 .algn-cntr{
@@ -507,6 +516,8 @@ ul li {
 }
 #footerCopy{
   color: white;
+  height: 2.5em;
+  padding-top: 0.444em
 }
 /* 
  * ************************************************** 4.2 - Navigation
@@ -535,7 +546,6 @@ ul li {
   width: 100%;
   white-space: nowrap;
   border-radius: 4px;
-  border-bottom: thin dotted #55585c;
 }
 .nav li a[aria-current="page"],
 .nav a.focus{
@@ -573,9 +583,8 @@ ul li {
   display: flex;
 }
 .page-nav .menu-item-has-children ul.sub-menu li{
-  margin-left: 1.58892rem;
-  border-color: #ddd;
-  border-top-color: #eee;
+  border-bottom: thin solid #c0c3c6;
+  border-left: thin solid #cacdcf;
   background: oldlace;
   border-radius: 4px;
 }
@@ -602,7 +611,7 @@ ul li {
   margin-left: 1rem
 } 
 #togmenu.nav-list{
-  
+  display: none;
   animation: fadeIn 0.5s;
 }
 @keyframes fadeIn {
@@ -669,7 +678,6 @@ a:hover, a[aria-current="page"]{
     flex-direction: row;
   }
   .page-nav li{
-    line-height: initital;
     flex-direction: row;
   
   }
@@ -701,6 +709,9 @@ a:hover, a[aria-current="page"]{
     font-size: 18px;
   }
   .mobiactive {
+    display: flex;
+  }
+  #togmenu.nav-list{
     display: flex;
   }
 }
@@ -1131,7 +1142,8 @@ details.dropdown > :last-child {
   text-align:center;
 }
 h2.widget-title{
-  font-size:1.36em
+  font-size:1.36em;
+  margin-top: 1rem;
 }
 .home .page-title{
   display: none;
@@ -1167,6 +1179,16 @@ h2.widget-title{
   }
   .site-description{
     font-size: 1.125em;
+  }
+}
+@media screen and (max-width: 899px) {
+  .page-nav .navbar-toggle.tag{
+    position: relative;
+    top: -2.1875em;
+  }
+  .page-nav .sub-menu{
+    left: 5em;
+    margin-top: 0;
   }
 }
 @media screen and (min-width: 600px) and (max-width: 899px) {

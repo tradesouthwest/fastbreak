@@ -14,39 +14,32 @@ get_header(); ?>
 
 <main id="main" class="container"> 
     <section id="sitecontent" class="row">
-    <?php if ( have_posts() ) : ?>
+        <div class="col col-12">
 
-    <?php while ( have_posts() ) : the_post(); ?>
+        <?php while ( have_posts() ) : the_post(); ?>
 
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope 
           itemtype="https://schema.org/Article">
 
-            <header>
-                <?php the_title(
-                sprintf( '<span class="post-title"><a href="%s" rel="bookmark">', 
-                        esc_attr( esc_url( get_permalink() ) ) 
-                      ), '</a></span>' ); ?>
-            </header>
-              
+          <div class="content-wrapper full-width-content">
                 <div class="inner-content">
-              
-                    <?php the_content(); ?>
-                  
+                    <header>
+                        <h2 class="post-title"><?php the_title(); ?></h2>
+                    </header>
+                    <div class="page-content-full">
+                    
+                        <?php do_action( 'fastbreak_render_attachment' ); ?>            
+                        <?php the_content(); ?>
+
+                    </div>
                 </div>
+            </div>
+
         </article>
     
-    <?php endwhile; ?>
-    
-    <?php else : ?>
-              
-        <div class="post-content">
-              
-            <?php echo esc_url( home_url('/') ); ?>
-              
+        <?php endwhile; ?>
+
         </div>
-
-	<?php endif; ?>
-
     </section>
 </main>
 

@@ -87,7 +87,7 @@
 						onclick = "handleClick()">|||</button>
 						<nav class="nav">
 					
-							<div id="togmenu" class="nav-list" style="display: flex">
+							<div id="togmenu" class="nav-list" style=" ">
 							<?php
 							wp_nav_menu(
 								array(

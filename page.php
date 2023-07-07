@@ -15,8 +15,7 @@ get_header(); ?>
 <main id="main" class="container"> 
     <section id="sitecontent" class="row">
         <div class="col col-12-sm col-12-md col-9-lg">
-            
-            <?php if ( have_posts() ) : ?>
+
             <?php while ( have_posts() ) : the_post(); ?>
             
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope 
@@ -30,27 +29,23 @@ get_header(); ?>
                     </div>
                 </div>
             </article>
-    
-            <?php endwhile; ?>
-            <?php else : ?>
-            
-                <div class="post-content">
+                <aside class="comments-aside">
                 
-                <p><?php echo esc_url( home_url('/') ); ?><?php esc_html_e('Can not find content. ', 'tinydancer'); ?></p>
+                    <?php comments_template(); ?>
                 
-                </div>
+                </aside>
 
-            <?php endif; ?>
+            <?php endwhile; ?>
 
         </div>
     
         <div class="col col-12-sm col-12-md col-3-lg">
             <?php if ( is_active_sidebar( 'sidebar-last' ) ) : ?>
-            <div id="sidebar-last" class="sidebar widget-area" role="complementary">
+                <div id="sidebar-last" class="sidebar widget-area" role="complementary">
+                            
+                    <?php dynamic_sidebar( 'sidebar-last' ); ?>
                         
-                <?php dynamic_sidebar( 'sidebar-last' ); ?>
-                    
-            </div>
+                </div>
             <?php endif; ?>
         </div>
     </section>

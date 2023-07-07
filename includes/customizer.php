@@ -89,4 +89,29 @@ function fastbreak_register_theme_customizer_setup($wp_customize)
 		) )
 	  );
 
+	  $wp_customize->add_setting( 'fastbreak_font_choices', array(
+		'default'           => 'arial',
+		'type'              => 'theme_mod',
+		'sanitize_callback' => 'sanitize_text_field',
+		'capability'        => 'edit_theme_options',
+        'transport'			=> 'refresh'
+	) );
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+        $wp_customize,
+        'container_type', array(
+            'label'       => __( 'Font Choices', 'fastbreak' ),
+            'description' => __( 'Choose Helvetica, Montserrat or browser', 'fastbreak' ),
+            'section'     => 'fastbreak_header',
+            'settings'    => 'fastbreak_font_choices',
+            'type'        => 'select',
+            'choices'     => array(
+				'-1'          => __( 'Default sans-serif', 'fastbreak' ),
+                'montserrat' => __( 'Montserrat', 'fastbreak' ),
+                'arial'      => __( 'Helvetica, sans-serif font-stack', 'fastbreak' ),
+				'initial'      => __( 'Let Browser Choose', 'fastbreak' )
+            )
+        )
+    ) );
+
 }
