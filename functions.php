@@ -319,7 +319,7 @@ function fastbreak_render_advert_image()
 	} else {
 		$url = '<img src="'. esc_url( $defimg ) . '" alt="banner" height=150>';
 	}
-	echo fastbreak_sanitize_html($url);
+	echo wp_kses_post( force_balance_tags( $url ) );
 }
 
 
@@ -334,7 +334,7 @@ function fastbreak_render_topstrip_html()
 	} else {
 		$text = date_i18n( get_option( 'date_format' ), strtotime( 'now' ) );
 	}
-	echo fastbreak_sanitize_html($text);
+	echo wp_kses_post( force_balance_tags( $text ) );
 }
 
 /** #A7
@@ -417,7 +417,7 @@ function fastbreak_single_meta_footer_render(){
 
 	</aside>
 	<?php 
-	echo fastbreak_sanitize_html(ob_get_clean());
+	echo wp_kses_post( force_balance_tags( ob_get_clean() ) );
 } 
 
 /** #A9

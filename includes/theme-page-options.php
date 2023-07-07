@@ -4,7 +4,7 @@
  */
 
 // A1
-add_action( 'wp_head', 'fastbreak_theme_customizer_css', 12 );  
+add_action( 'init', 'fastbreak_theme_customizer_css' );  
 // A2
 add_action( 'admin_menu',         'fastbreak_theme_options_help_page' );
 
@@ -41,21 +41,21 @@ function fastbreak_theme_customizer_css()
     
     if( $fnt == 'initial' ) {
 
-        $font = '<style id="fastbreak-fonts-style" type="text/css">';
-        $font .= 'body, button, input, select, textarea, .h1{';
-        $font .= 'font-family: initial;}</style>';
+        //$font = '<style id="fastbreak-fonts-style" type="text/css">';
+        $font = 'body, button, input, select, textarea, .h1{';
+        $font = 'font-family: initial;}';
 
     } 
     if( $fnt == 'montserrat' ) { 
 
         $urib  = get_stylesheet_directory_uri() . '/rels/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXo.woff2';
-        $font = '<style id="fastbreak-montserrat-style" type="text/css">';
-        $font .= 
+        //$font = '<style id="fastbreak-montserrat-style" type="text/css">';
+        $font = 
         "@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 400;src: url( $urib ) format('woff2');
         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
         }";
         $font .= 'body, button, input, select, textarea, .h1{';
-        $font .= 'font-family: "Montserrat";}</style>';
+        $font .= 'font-family: "Montserrat";}';
     }
     if( $fnt == 'arial' ) { 
 
@@ -63,11 +63,13 @@ function fastbreak_theme_customizer_css()
     }
 
     /* use above set values into inline styles */
-    $css = '<style id="fastbreak-inline-customizer" type="text/css">';
-    $css .= '#footerCopy,.top-strip,.nav{background-color: ' . esc_attr($tsb) . '}';
-    $css .= '</style>' . $font;
+    //$css = '<style id="fastbreak-inline-customizer" type="text/css">';
+    $css = '#footerCopy,.top-strip,.nav{background-color: ' . esc_attr($tsb) . '}' . $font;
+    //$css .= '</style>' . $font;
 
-    echo force_balance_tags($css);  
+    wp_register_style( 'fastbreak-inline-customizer', false );
+	wp_enqueue_style( 'fastbreak-inline-customizer' );
+	wp_add_inline_style( 'fastbreak-inline-customizer', $css );
         
 } 
 
@@ -133,7 +135,7 @@ function fastbreak_short_basic_debug_info( $html = true ) {
     if ( $html ) {
         $html = '<ol>';
         foreach ( $data as $what_v => $v ) {
-$html .= '<li style="display: inline;"><strong>' . $what_v . '</strong>: ' . $v . ' </li>';
+    $html .= '<li style="display: inline;"><strong>' . $what_v . '</strong>: ' . $v . ' </li>';
         }
         $html .= '</ol>';
     }

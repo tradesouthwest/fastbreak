@@ -41,7 +41,8 @@ get_header(); ?>
                     </div>
                     <div class="col-8 inner-content">
                         <header>
-                        <?php the_title( sprintf( '<h2><span class="post-title"><a href="%s" rel="bookmark">', 
+                        <?php 
+                            the_title( sprintf( '<h2><span class="post-title"><a href="%s" rel="bookmark">', 
                                 esc_attr( esc_url( get_permalink() ) ) 
                                 ), 
                                 '</a></span></h2>' 

@@ -35,11 +35,12 @@ get_header(); ?>
                     itemtype="https://schema.org/Article">
 
                     <header class="page-title">
-                        <?php the_title( sprintf( '<h3><span class="post-title"><a href="%s" rel="bookmark">', 
-                                esc_attr( esc_url( get_permalink() ) ) 
-                                ), 
-                            '</a></span></h3>' 
-                            ); ?>
+                    <?php 
+                        the_title( sprintf( '<h3><span class="post-title"><a href="%s" rel="bookmark">', 
+                            esc_attr( esc_url( get_permalink() ) ) 
+                            ), 
+                        '</a></span></h3>' 
+                        ); ?>
                     </header>
               
                     <div class="inner-content">
