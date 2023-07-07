@@ -286,6 +286,16 @@ function fastbreak_theme_widgets_init() {
 	);
 }
 
+/**
+ * Text sanitizer for outputs
+ * @since 1.0
+ * 
+ * @return string $input
+ */
+function fastbreak_sanitize_html( $input ) {
+    return wp_kses_post( force_balance_tags( $input ) );
+}
+
 /** 
  * Customizer
  * suport footer background & text color
@@ -309,7 +319,7 @@ function fastbreak_render_advert_image()
 	} else {
 		$url = '<img src="'. esc_url( $defimg ) . '" alt="banner" height=150>';
 	}
-	echo $url;
+	echo fastbreak_sanitize_html($url);
 }
 
 
@@ -324,7 +334,7 @@ function fastbreak_render_topstrip_html()
 	} else {
 		$text = date_i18n( get_option( 'date_format' ), strtotime( 'now' ) );
 	}
-	echo $text;
+	echo fastbreak_sanitize_html($text);
 }
 
 /** #A7
@@ -407,7 +417,7 @@ function fastbreak_single_meta_footer_render(){
 
 	</aside>
 	<?php 
-	echo ob_get_clean();
+	echo fastbreak_sanitize_html(ob_get_clean());
 } 
 
 /** #A9

@@ -67,7 +67,7 @@ function fastbreak_theme_customizer_css()
     $css .= '#footerCopy,.top-strip,.nav{background-color: ' . esc_attr($tsb) . '}';
     $css .= '</style>' . $font;
 
-    echo $css;  
+    echo force_balance_tags($css);  
         
 } 
 
@@ -83,34 +83,21 @@ function fastbreak_theme_customizer_css()
     ?>
     <div class="wrap">
         <div id="icon-themes" class="icon32"></div>
-        <h2>Fastbreak Theme Help</h2>
+        <h2><?php esc_html_e( 'Fastbreak Theme Help', 'fastbreak' ); ?></h2>
         <?php settings_errors(); ?>
-        <?php
-            if( isset( $_GET[ 'tab' ] ) ) {
-                $active_tab = $_GET[ 'tab' ];
-            } 
-    $active_tab = isset( $_GET[ 'tab' ] ) ? $_GET[ 'tab' ] : 'display_options';
-        ?>
-    <h2 class="nav-tab-wrapper">
-    <a href="?page=fastbreak-theme-help&tab=display_options" class="nav-tab">Environment</a>
-    <a href="?page=fastbreak-theme-help&tab=theme_options" class="nav-tab">Help</a>
-    </h2>
-    <?php 
-    if( $active_tab == 'display_options' ) { ?>
-    
+       
     <section>
-    <h2><?php _e( 'Basic Information', 'fastbreak'); ?></h2>
-    <div id="fastbreak-short" style="background:oldlace;height:3em">
+    <h3><?php esc_html_e( 'Basic Information', 'fastbreak'); ?></h3>
+    <div style="background:oldlace;height:3em">
         <?php echo fastbreak_short_basic_debug_info(); ?>
     </div>
     <hr id="fastbreak-hr"><br>
-    <div id="fastbreak-short" style="background:oldlace;height:3em">
+    <div style="background:oldlace;height:3em">
         <p><a class="button" href="<?php echo admin_url( '/customize.php?autofocus[section]=fastbreak_header' ); ?>" 
            title="Customizer">Customize Theme Settings</a></p>
     </div>
     </section>
-    <?php } else { ?>
-
+    
     <section><h2><?php esc_html_e( 'Theme Help', 'fastbreak' ); ?></h2>
     <p><?php esc_html_e( 'For support issues please use the Issues panel on our Github account for this theme.', 'fastbreak'); ?>
     <a href="<?php echo esc_url('https://github.com/tradesouthwest/fastbreak/issues'); ?>" 
@@ -123,11 +110,12 @@ function fastbreak_theme_customizer_css()
             <li>&#9733; <?php esc_html_e('For cusomtizations you can reach out to the theme author on Github Issues tracker, linked above.', 'fastbreak'); ?></li>
             <li>&#9733; <?php esc_html_e('Mobile menus should be well adjusted on all devices. If you find a particular browser/device that is looking odd, please open a new issue so we can update the theme.', 'fastbreak'); ?></li>
             <li>&#9733; <?php esc_html_e('Base background color for top bars and footer has white text. Be sure to compensate by using darker backgrounds.', 'fastbreak'); ?></li>
-            <li>&#9733; <?php esc_html_e('', 'fastbreak'); ?></li>
+            <li>&#9733; <?php esc_html_e('Title on Front Page template is hidden. To show title edit out line 1148 in the stylesheet.', 'fastbreak'); ?>
+            <code>.home .page-title{ display: flex; }</code></li>
             <li>&#9733; <?php esc_html_e('Theme by TradeSouthWest - https://tradesouthwest.com', 'fastbreak'); ?></li>
+            <li>&#9733; <?php esc_html_e('', 'fastbreak'); ?></li>
         </ul>
     </section>
-    <?php } ?>
     
     </div>
 <?php 
@@ -136,11 +124,11 @@ function fastbreak_short_basic_debug_info( $html = true ) {
     global $cp_version, $wpdb;
 
     $data = array(
-        'ClassicPress Version'     => $cp_version,
-        'PHP Version'           => phpversion(),
-        'MySQL Version'         => $wpdb->db_version(),
-        'WP_DEBUG'              => ( WP_DEBUG === true ) ?  
-                                   'Enabled' : 'Disabled',
+        __('ClassicPress Version', 'fastbreak' )  => $cp_version,
+        __('PHP Version', 'fastbreak' )           => phpversion(),
+        __('MySQL Version', 'fastbreak' )         => $wpdb->db_version(),
+        __('WP_DEBUG State', 'fastbreak' )        => ( WP_DEBUG === true ) ?  
+                                                        'Enabled' : 'Disabled',
     );
     if ( $html ) {
         $html = '<ol>';

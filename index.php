@@ -25,10 +25,11 @@ get_header(); ?>
                 itemtype="https://schema.org/Article">
                 <div class="inner-content">
                 <header>
-                <h2><?php the_title(
-                    sprintf( '<span class="post-title"><a href="%s" rel="bookmark">', 
-                    esc_attr( esc_url( get_permalink() ) ) 
-                ), '</a></span>' ); ?></h2>
+                <?php the_title( sprintf( '<h2><span class="post-title"><a href="%s" rel="bookmark">', 
+                        esc_attr( esc_url( get_permalink() ) ) 
+                        ), 
+                        '</a></span></h2>' 
+                    ); ?>
                 </header>
                     <div class="page-content">
                         <?php the_content(); ?>

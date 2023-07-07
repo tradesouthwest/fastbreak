@@ -9,15 +9,17 @@
                 if( has_custom_logo() ) : ?>
                 <div class="site-logo">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                    <?php echo wp_kses_post( force_balance_tags( 
-                        tinydancer_theme_custom_logo() ) ); ?></a>
+                    <?php 
+                    echo wp_kses_post( force_balance_tags( 
+                        tinydancer_theme_custom_logo() ) ); ?>
+                    </a>
                 </div>
                 <?php endif; ?>
         </div>
         
         <div class="col is-right">
             <div class="site-description">
-                <?php echo get_bloginfo( 'description', 'display' ); ?>
+                <?php echo esc_html( get_bloginfo( 'description', 'display' ) ); ?>
             </div>
         </div>
     </div>
