@@ -2,10 +2,10 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: tinyDancer 1.0.1\n"
+"Project-Id-Version: fastbreak 1.0.1\n"
 "Report-Msgid-Bugs-To: https://support.tradesouthwest.com\n"
-"POT-Creation-Date: 2023-06-29 09:53-0700\n"
-"PO-Revision-Date: 2023-06-29 09:53-0700\n"
+"POT-Creation-Date: 2023-07-07 16:37-0700\n"
+"PO-Revision-Date: 2023-07-07 16:38-0700\n"
 "Last-Translator: \n"
 "Language-Team: Tradesouthwest\n"
 "Language: en_US\n"
@@ -19,94 +19,255 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: footer.php:55
-msgid "Top of page link"
+#: archive.php:16 functions.php:413
+msgid "Categorized as: "
 msgstr ""
 
-#: functions.php:150
+#: archive.php:48
+msgid "Can not find content for: "
+msgstr ""
+
+#: archive.php:50 index.php:46
+msgid "Can not find content. "
+msgstr ""
+
+#: comments.php:34
+msgid "&laquo; Older Comments"
+msgstr ""
+
+#: comments.php:36
+msgid "Newer Comments &raquo;"
+msgstr ""
+
+#: comments.php:45
+msgid "Send"
+msgstr ""
+
+#: comments.php:46
+msgid "Write a Reply or Comment"
+msgstr ""
+
+#: comments.php:48
+msgid "You may use these "
+msgstr ""
+
+#: comments.php:49
+msgid "HyperText Markup Language"
+msgstr ""
+
+#: comments.php:50
+msgid "HTML"
+msgstr ""
+
+#: comments.php:51
+msgid "tags and attributes: "
+msgstr ""
+
+#: comments.php:54
+msgid "Respond"
+msgstr ""
+
+#: comments.php:55
+msgid "Comment textarea box"
+msgstr ""
+
+#: comments.php:59
+msgid "You must be "
+msgstr ""
+
+#: comments.php:60
+msgid "logged in "
+msgstr ""
+
+#: comments.php:61
+msgid "to post a comment."
+msgstr ""
+
+#: comments.php:63
+msgid "Your email address will not be published."
+msgstr ""
+
+#: footer.php:40
+msgid "Y"
+msgstr ""
+
+#: footer.php:41
+msgid "Top"
+msgstr ""
+
+#: functions.php:129
 msgid "Primary Main Menu"
 msgstr ""
 
-#: functions.php:151
-msgid "Secondary Top Menu"
+#: functions.php:130
+msgid "Top - No stacking"
 msgstr ""
 
-#: functions.php:219
+#: functions.php:230 functions.php:242
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:221
+#: functions.php:232 functions.php:244
 msgid "Add widgets here to appear in your sidebar."
 msgstr ""
 
-#: functions.php:231
+#: functions.php:254
 msgid "Footer Section One"
 msgstr ""
 
-#: functions.php:233 functions.php:245 functions.php:257
+#: functions.php:256 functions.php:268 functions.php:280
 msgid "Appears at the bottom of the content on posts and pages."
 msgstr ""
 
-#: functions.php:243
+#: functions.php:266
 msgid "Footer Section Two"
 msgstr ""
 
-#: functions.php:255
+#: functions.php:278
 msgid "Footer Section Three"
 msgstr ""
 
-#: functions.php:429
+#: functions.php:412
+msgid "By: "
+msgstr ""
+
+#: functions.php:414
+msgid "Keys: "
+msgstr ""
+
+#: functions.php:415
+msgid "Date: "
+msgstr ""
+
+#: functions.php:437
 msgid "More Pages"
 msgstr ""
 
-#: functions.php:432
+#: functions.php:441
 msgid "No more entries for this page."
 msgstr ""
 
-#: header.php:24
+#: header.php:25
 msgid "Skip to content"
 msgstr ""
 
-#: inc/customizer.php:33
-msgid "Theme Headings"
+#: includes/customizer.php:34
+msgid "Theme Heading and Advert"
 msgstr ""
 
-#: inc/customizer.php:60
-msgid "Change colors in Additional CSS section. \".hero-title\""
+#: includes/customizer.php:52
+msgid "Add text to very top strip"
 msgstr ""
 
-#: inc/customizer.php:69
-msgid "Hero Heading"
+#: includes/customizer.php:66
+msgid "Color for top bars."
 msgstr ""
 
-#: inc/customizer.php:73
-msgid "Change colors in Additional CSS section. \".hero-heading\""
+#: includes/customizer.php:69
+msgid "Use darker colors only."
 msgstr ""
 
-#: inc/customizer.php:102
-msgid "Sets height of Hero section height to include background image. (px)"
+#: includes/customizer.php:103
+msgid "Font Choices"
 msgstr ""
 
-#: inc/customizer.php:113
-msgid "Leave blank to remove/not show button."
+#: includes/customizer.php:104
+msgid "Choose Helvetica, Montserrat or browser"
 msgstr ""
 
-#: inc/customizer.php:124
-msgid "Styles for button are using \".cta-tinyd\""
+#: includes/customizer.php:109
+msgid "Default sans-serif"
 msgstr ""
 
-#: inc/customizer.php:135
-msgid "Vertical positioning only. Uses em not px. Decimals OK."
+#: includes/customizer.php:110
+msgid "Montserrat"
 msgstr ""
 
-#: inc/customizer.php:166
-msgid "Choose how to set posts on blog page. Column or Row?"
+#: includes/customizer.php:111
+msgid "Helvetica, sans-serif font-stack"
 msgstr ""
 
-#: inc/customizer.php:183
-msgid "Choose the text alignment for central content."
+#: includes/customizer.php:112
+msgid "Let Browser Choose"
 msgstr ""
 
-#: inc/customizer.php:202
-msgid "Change padding space of Content sections."
+#: includes/theme-page-options.php:21
+msgid "Theme Information"
+msgstr ""
+
+#: includes/theme-page-options.php:22
+msgid "Fastbreak Help"
+msgstr ""
+
+#: includes/theme-page-options.php:78
+msgid "Fastbreak Theme Help"
+msgstr ""
+
+#: includes/theme-page-options.php:84
+msgid "Customize Theme Settings"
+msgstr ""
+
+#: includes/theme-page-options.php:88
+msgid "Theme Help"
+msgstr ""
+
+#: includes/theme-page-options.php:89
+msgid ""
+"For support issues please use the Issues panel on our Github account for "
+"this theme."
+msgstr ""
+
+#: includes/theme-page-options.php:91
+msgid "theme support"
+msgstr ""
+
+#: includes/theme-page-options.php:92
+msgid "Open Issue for Support"
+msgstr ""
+
+#: includes/theme-page-options.php:93
+msgid "[opens in new window]"
+msgstr ""
+
+#: includes/theme-page-options.php:94
+msgid "Tips"
+msgstr ""
+
+#: includes/theme-page-options.php:96
+msgid ""
+"Advert box in header can be used for more than advertising. Try adding "
+"player of the month or deal for the day."
+msgstr ""
+
+#: includes/theme-page-options.php:97
+msgid ""
+"For cusomtizations you can reach out to the theme author on Github Issues "
+"tracker, linked above."
+msgstr ""
+
+#: includes/theme-page-options.php:98
+msgid ""
+"Mobile menus should be well adjusted on all devices. If you find a "
+"particular browser/device that is looking odd, please open a new issue so we "
+"can update the theme."
+msgstr ""
+
+#: includes/theme-page-options.php:99
+msgid ""
+"Base background color for top bars and footer has white text. Be sure to "
+"compensate by using darker backgrounds."
+msgstr ""
+
+#: includes/theme-page-options.php:100
+msgid ""
+"Title on Front Page template is hidden. To show title edit out line 1148 in "
+"the stylesheet."
+msgstr ""
+
+#: includes/theme-page-options.php:102
+msgid "Theme by TradeSouthWest https://tradesouthwest.com"
+msgstr ""
+
+#: includes/theme-page-options.php:103
+msgid "ver 1.0.0"
 msgstr ""
