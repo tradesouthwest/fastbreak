@@ -81,7 +81,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: bolder;
+  font-weight: bold;
   margin: 0.35em 0 0.7em;
 }
 h1 {
@@ -1219,6 +1219,10 @@ h2.widget-title{
   }
   .site-description{
     font-size: 1.25em;
+  }
+  .hentry{
+    padding-left: 2rem;
+    padding-right: 1rem;
   }
 
 }
