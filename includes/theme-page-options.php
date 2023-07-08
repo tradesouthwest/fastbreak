@@ -39,10 +39,14 @@ function fastbreak_theme_customizer_css()
     $fnt  = ( empty( get_theme_mod( 'fastbreak_font_choices' ) ) ) ? 'montserrat' 
                    : get_theme_mod( 'fastbreak_font_choices' );
     $urib  = get_stylesheet_directory_uri() . '/rels/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXo.woff2';
+    $uric  = get_stylesheet_directory_uri() . '/rels/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2';
     
-    if( $fnt == 'initial' ) {
+    if( $fnt == 'opensans' ) {
+        $font .= "@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 400;src: url( $uric ) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }";
         $font .= 'body, button, input, select, textarea, .h1{';
-        $font .= 'font-family: initial;}';
+        $font .= 'font-family: "Open Sans";}';
     } 
     if( $fnt == 'montserrat' ) { 
         $font .= "@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 400;src: url( $urib ) format('woff2');

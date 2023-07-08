@@ -109,7 +109,7 @@ function fastbreak_register_theme_customizer_setup($wp_customize)
 				'-1'          => __( 'Default sans-serif', 'fastbreak' ),
                 'montserrat' => __( 'Montserrat', 'fastbreak' ),
                 'arial'      => __( 'Helvetica, sans-serif font-stack', 'fastbreak' ),
-				'initial'      => __( 'Let Browser Choose', 'fastbreak' )
+				'opensans'      => __( 'Open Sans Font', 'fastbreak' )
             )
         )
     ) );

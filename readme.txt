@@ -15,16 +15,19 @@ Fastbreak for ClassicPress is a fast and sleek magazine type of layout with mobi
 Fastbreak for ClassicPress is a fast and sleek magazine type of layout with mobile ready menus and widgets. 
 Has built in font stack for Helvetica and another for Monsterrat so you don't need to use an external source to load fonts.
 
-== Features ==
-
 - Custom advert area in header
 - Flex based layouts
+- Fonts Open Sans, Monsterrat and sans-serif served in theme files.
 - Full width template
 - Three sections template, ideal for mobile so content is on top.
 - Default template is 3/4 by 1/4 content and sidebar
 - Front page template is thin sidebar, right; wide center content and second sidebar, right layout.
-- Cusomtizer has options to Add text to top strip in header
+- Customizer has options to Add text to top strip in header
 - Change color background of theme
 - Change background of header and footer sections
 - Add an advert and your logo to header.
 - Fully mobile friendly.
+
+== Change Log ==
+* 1.0.0
+- initial release 
