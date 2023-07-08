@@ -1,4 +1,5 @@
 # Fastbreak
+
 Fastbreak for ClassicPress is a fast and sleek magazine type of layout with mobile ready menus and widgets.
 
 Theme Name:   Fastbreak
@@ -20,14 +21,15 @@ License: GPLv2 or later; License URI: http://www.gnu.org/licenses/gpl-2.0.html;
 Tags: one-column, two-columns, right-sidebar, left-sidebar, blog
 
 ## Description
+
 Fastbreak for ClassicPress is a fast and sleek magazine type of layout with mobile ready menus and widgets. Has built in font stack for Helvetica and another for Monsterrat so you don't need to use an external source to load fonts. 
 Demo at: https://classicpress-themes.com/fastbreak/
-
 
 ## Features 
 
 - Custom advert area in header
 - Flex based layouts
+- Fonts Open Sans, Monsterrat and sans-serif served in theme files.
 - Full width template
 - Three sections template, ideal for mobile so content is on top.
 - Default template is 3/4 by 1/4 content and sidebar
