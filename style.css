@@ -4,7 +4,7 @@ Theme URI:   https://classicpress-themes/fastbreak
 Author:      Tradesouthwest
 Author URI:  https://tradesouthwest.com/
 Description: Fastbreak for ClassicPress is a fast and sleek magazine type of layout with mobile ready menus and widgets.
-Version:     1.0.0
+Version:     1.0.1
 
 Requires PHP: 7.2
 Requires CP:  1.4
@@ -493,7 +493,7 @@ ul li {
   max-height: 128px;
 } 
 .top-strip{
-  height:2.444em;
+  height: 2.6222em;
   padding-top: .45em;
 }
 .above-menu{
@@ -523,6 +523,30 @@ ul li {
 /* 
  * ************************************************** 4.2 - Navigation
  */
+ .page-nav-top{
+  display: flex;
+  flex-direction: row;
+}
+.page-nav-top a{
+  color: var(--bg-secondary-color);
+  padding: 2px 9px;
+  border-radius: 4px;
+  height:1.67em;
+  display: inline-flex;
+}
+.page-nav-top li{
+  border: thin solid ghostwhite;
+  margin-right: 1rem;
+  border-radius: 4px;
+
+}
+.page-nav-top a:hover{
+  opacity: .76
+}
+a:focus-within { 
+  outline:thin dotted; 
+}
+
  .nav {
   display: flex;
   min-height: 3.28rem;
@@ -657,27 +681,7 @@ ul li {
   display: flex;
 
 }
-.page-nav-top{
-  display: flex;
-  flex-direction: row;
-}
-.page-nav-top a{
-  color: var(--bg-secondary-color);
-  padding-left:.938rem;
-  padding-right:.938rem;
-  border-radius: 4px;
-}
-.page-nav-top li{
-  border: thin solid ghostwhite;
-  margin-right: 1rem;
-  border-radius: 4px;
-}
-.page-nav-top a:hover{
-  opacity: .76
-}
-a:focus-within { 
-  outline:thin dotted; 
-}
+
 a:hover, a[aria-current="page"]{ 
   outline:0; 
 }
@@ -1281,6 +1285,11 @@ h2.widget-title{
     position:relative;
     bottom: -2em;
     left:1px;
+  }
+  .top-strip{
+    display: flex;
+    width: 100%;
+    overflow: scroll;
   }
   .top-navbanner .nav{
     margin-top: -1.2em
