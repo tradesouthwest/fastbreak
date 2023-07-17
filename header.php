@@ -95,8 +95,7 @@
 							wp_nav_menu(
 								array(
 									'theme_location' => 'primary-menu',
-									'menu_class' => 'page-nav',
-									'walker' => new Fastbreak_Wrap(),
+									'menu_class' => 'page-nav'
 								)
 							);
 							?>

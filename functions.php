@@ -46,8 +46,6 @@ add_action( 'fastbreak_render_attachment',  'fastbreak_render_attachment_link' )
 add_action( 'fastbreak_single_meta_footer', 'fastbreak_single_meta_footer_render' );
 // A9
 add_action( 'fastbreak_check_pagination', 'fastbreak_check_pagination_pre' );
-// A9
-//add_action( 'admin_init',                 'fastbreak_theme_add_editor_styles' );
 
 if ( ! function_exists( 'wp_body_open' ) ) {
     /**
@@ -172,26 +170,7 @@ function fastbreak_theme_enqueue_styles() {
 		$ver, 
 		true 
 	); 
-/*
-	wp_localize_script(
-		'fastbreak-script',
-		'screenReaderText',
-		array(
-			'expand'   => __( 'expand child menu', 'fastbreak' ),
-			'collapse' => __( 'collapse child menu', 'fastbreak' ),
-		)
-	); */
-}
 
-
-/** #A5
- * Registers an editor stylesheet for the theme.
- *
- * @since 1.0.0
- */
-function fastbreak_theme_add_editor_styles() {
-
-    add_editor_style( 'editor-style.css' );
 }
 
 /**
@@ -302,7 +281,7 @@ function fastbreak_sanitize_html( $input ) {
  * header background & color
  * page background & color
  */
-require get_template_directory() . '/includes/fastbreak_wrap.php';
+//require get_template_directory() . '/includes/fastbreak_wrap.php';
 require get_template_directory() . '/includes/customizer.php';
 require get_template_directory() . '/includes/theme-page-options.php';
 

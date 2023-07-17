@@ -12,7 +12,7 @@ Requires CP:  1.4
 
 Tested up to: 1.5
 
-Version:      1.0.0
+Version:      1.0.1
 
 Text domain:  fastbreak
 

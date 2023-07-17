@@ -32,3 +32,6 @@ Has built in font stack for Helvetica and another for Monsterrat so you don't ne
 
 * 1.0.0
 - initial release 
+* 1.0.1
+- removed nav walker class
+- restyled mobile nav elements

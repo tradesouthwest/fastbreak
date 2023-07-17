@@ -83,6 +83,7 @@ h5,
 h6 {
   font-weight: bold;
   margin: 0.35em 0 0.7em;
+  overflow-wrap: break-word;
 }
 h1 {
   font-size: 2em;
@@ -567,6 +568,24 @@ ul li {
 .page-nav li:focus,
 .page-nav li:focus-within{
   background: oldlace
+}
+.nav li.menu-item-has-children:after{
+  
+  color: #eee;
+  text-shadow: 1px 1px 2px #333;
+  content: " ||";
+  font-size: small;
+  transform: rotate(90deg);
+  padding: 1px;
+  border: 8px solid #556677;
+  height: 2.5em;
+  width: 2.5em;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 2px 1px 1px 0
+}
+.nav li.menu-item-has-children:hover:after{
+  border-color: #999999
 }
 .page-nav{
   list-style-type: none;
@@ -1256,6 +1275,20 @@ h2.widget-title{
   }
   .site-description{
     font-size: 1.125em;
+  }
+  .navbar-toggle.button.outline{
+    background: #fdfdfd;
+    position:relative;
+    bottom: -2em;
+    left:1px;
+  }
+  .top-navbanner .nav{
+    margin-top: -1.2em
+  }
+  .nav li.menu-item-has-children::after{
+    padding: 1px;
+    width:2.382em;
+    margin-top: -2.368em;
   }
 }
 @media screen and (max-width: 899px) {
