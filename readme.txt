@@ -3,7 +3,7 @@ Contributors: Tradesouthwest
 Requires PHP: 7.4
 Requires CP:  1.4
 Tested up to: 1.6
-Version:      1.0.1
+Version:      1.0.2
 Text domain:  fastbreak
 License: GPLv2 or later; License URI: http://www.gnu.org/licenses/gpl-2.0.html; 
 Tags: one-column, two-columns, right-sidebar, left-sidebar, blog
@@ -35,3 +35,5 @@ Has built in font stack for Helvetica and another for Monsterrat so you don't ne
 * 1.0.1
 - removed nav walker class
 - restyled mobile nav elements
+* 1.0.2
+- ver bump for directory link
