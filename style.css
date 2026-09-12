@@ -51,7 +51,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
     "Avenir Next", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
     "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   --font-family-mono: monaco, "Consolas", "Lucida Console", monospace;
-}
+} 
 html {
   box-sizing: border-box;
   line-height: 1.15;
@@ -61,7 +61,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-}
+} 
 /* 
  * ************************************************** 2.0 - Universal 
  */

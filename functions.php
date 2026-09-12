@@ -68,6 +68,10 @@ if ( ! function_exists( 'wp_body_open' ) ) {
  *
  * @since FastBreak 1.0
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit( 'Direct script access denied.' );
+}
+
 if ( ! function_exists( 'fastbreak_theme_setup' ) ) :
 
 	function fastbreak_theme_setup() {
@@ -156,7 +160,7 @@ function fastbreak_theme_content_width() {
 function fastbreak_theme_enqueue_styles() {
 
 	wp_enqueue_style( 
-		'newstime-style', 
+		'fastbreak-style', 
 		get_stylesheet_directory_uri() .'/style.css',
 		array(),
 		'1.0.3'

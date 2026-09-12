@@ -6,8 +6,8 @@ Theme Name:   Fastbreak
 Contributors: Tradesouthwest
 Requires PHP: 7.4
 Requires CP:  1.4
-Tested up to: 1.6
-Version:      1.0.1
+Tested up to: 2.7
+Version:      1.0.3
 Text domain:  fastbreak
 
 License: GPLv2 or later; License URI: http://www.gnu.org/licenses/gpl-2.0.html; 

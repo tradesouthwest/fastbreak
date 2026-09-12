@@ -3,11 +3,6 @@
  * Page options settings
  */
 
-// A1
-add_action( 'wp_enqueue_scripts', 'fastbreak_theme_customizer_css', 15 );  
-// A2
-add_action( 'admin_menu',         'fastbreak_theme_options_help_page' );
-
 /** @A2
  * Add theme menu
  *
@@ -25,6 +20,9 @@ function fastbreak_theme_options_help_page() {
         'fastbreak_siteinfo_admin_render'
     );
 }
+// A2
+add_action( 'admin_menu',         'fastbreak_theme_options_help_page' );
+
 /** A1
  * CUSTOM FONT OUTPUT, CSS
  * The @font-face rule should be added to the stylesheet before any styles. (priority 2)
@@ -66,7 +64,8 @@ function fastbreak_theme_customizer_css()
 	wp_add_inline_style( 'fastbreak-inline-customizer', $css );
         
 } 
-
+// A1
+add_action( 'wp_enqueue_scripts', 'fastbreak_theme_customizer_css', 15 );  
 
 /**
  * information about website
@@ -104,7 +103,7 @@ function fastbreak_theme_customizer_css()
             <li>&#9733; <?php esc_html_e('Title on Front Page template is hidden. To show title edit out line 1148 in the stylesheet.', 'fastbreak'); ?>
             <code>.home .page-title{ display: flex; }</code></li>
             <li>&#9733; <?php esc_html_e('Theme by TradeSouthWest https://tradesouthwest.com', 'fastbreak'); ?></li>
-            <li>&#9733; <?php esc_html_e('ver 1.0.0', 'fastbreak'); ?></li>
+            <li>&#9733; <?php esc_html_e('ver 1.0.3', 'fastbreak'); ?></li>
         </ul>
     </section>
     
