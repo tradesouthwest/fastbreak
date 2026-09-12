@@ -12,7 +12,7 @@ Text domain:  fastbreak
 
 License: GPLv2 or later; License URI: http://www.gnu.org/licenses/gpl-2.0.html; 
 
-Tags: one-column, two-columns, right-sidebar, left-sidebar, blog
+Tags: one-column, two-columns, right-sidebar, left-sidebar
 
 ## Description
 

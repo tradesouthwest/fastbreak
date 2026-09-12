@@ -37,3 +37,4 @@ Has built in font stack for Helvetica and another for Monsterrat so you don't ne
 - restyled mobile nav elements
 * 1.0.2
 - ver bump for directory link
+* 1.0.3 clas963

@@ -47,16 +47,6 @@ add_action( 'fastbreak_single_meta_footer', 'fastbreak_single_meta_footer_render
 // A9
 add_action( 'fastbreak_check_pagination', 'fastbreak_check_pagination_pre' );
 
-if ( ! function_exists( 'wp_body_open' ) ) {
-    /**
-    * Add backwards compatibility support for wp_body_open function.
-    */
-    function wp_body_open() {
-        do_action( 'wp_body_open' );
-    }
-}
-
-
 /** #A1
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -137,7 +127,6 @@ if ( ! function_exists( 'fastbreak_theme_setup' ) ) :
 		);
 	}
 endif;
-
 
 /** #A2
  * Sets the content width in pixels, based on the theme's design and stylesheet.
