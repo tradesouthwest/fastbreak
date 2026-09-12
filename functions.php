@@ -92,14 +92,17 @@ if ( ! function_exists( 'fastbreak_theme_setup' ) ) :
 		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		*/
 		// a.
-		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		));
-
+		if ( version_compare( function_exists( 'classicpress_version' ) 
+			? classicpress_version() : '0', '2', '<=' ) ) {
+				add_theme_support( 'html5', array(
+					'search-form',
+					'comment-form',
+					'comment-list',
+					'gallery',
+					'caption',
+				));
+		}
+		
 		// b.
 		add_theme_support( 'title-tag' );
     	add_theme_support( 'automatic-feed-links' ); // rss feederz 
@@ -139,7 +142,7 @@ endif;
  *
  * @global int $content_width
  *
- * @since Classic Sixteen 1.0
+ * @since fastnreal 1.0.3
  */
 function fastbreak_theme_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'fastbreak_content_width', 766 );
@@ -148,13 +151,15 @@ function fastbreak_theme_content_width() {
 /** #A3
  * Enqueues scripts and styles.
  *
- * @since Classic Sixteen 1.0
+ * @since 1.0.3
  */
 function fastbreak_theme_enqueue_styles() {
-	$ver = '1.0.0';
+
 	wp_enqueue_style( 
-		'fastbreak-style', 
-		get_stylesheet_uri() 
+		'newstime-style', 
+		get_stylesheet_directory_uri() .'/style.css',
+		array(),
+		'1.0.3'
 	);
     
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -167,7 +172,7 @@ function fastbreak_theme_enqueue_styles() {
 		'fastbreak-menu', 
 		get_template_directory_uri() . '/rels/fastbreak-menu.js', 
 		array(), 
-		$ver, 
+		'1.0.2', 
 		true 
 	); 
 
